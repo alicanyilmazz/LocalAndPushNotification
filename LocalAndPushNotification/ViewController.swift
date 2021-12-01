@@ -9,9 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var dateTextField: UITextField!
+    
+    private var notificationDate : DateComponents!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dateTextField.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -33,5 +38,32 @@ class ViewController: UIViewController {
         
     }
     
+    
+    @IBAction func setFullDateNotification(_ sender: UIButton) {
+        LocalNotificationManager.setNotification(notificationDate, repeats: false, title: "Ohh My Gosh", body: "This is a exact notification", userInfo: ["aps" : ["father":"linus torvalds"]])
+        
+    }
+}
+
+extension ViewController : UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIDatePicker().createDatePicker(_vc: self, textField: &dateTextField)
+    }
+    
+    @objc func cancelButtonClick(){
+        self.dateTextField.resignFirstResponder()
+    }
+   
+    @objc func doneButtonClick(){
+        if let dateAndTimePicker = self.dateTextField.inputView as? UIDatePicker{
+            self.dateTextField.text = DateFormatter().convertDateToString(date: dateAndTimePicker.date)
+            self.notificationDate = Calendar.current.dateComponents([.minute , .hour , .day , .month , .year], from: dateAndTimePicker.date)
+        }
+        self.dateTextField.resignFirstResponder()
+    }
+    
+    @objc func datePickerHandler(datePicker : UIDatePicker){
+        // You can use it to capture changes.
+    }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A490F5B27578DB900D8D475 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A490F5A27578DB900D8D475 /* DateExtension.swift */; };
 		5A83FD6A27525D6C00604686 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83FD6927525D6C00604686 /* AppDelegate.swift */; };
 		5A83FD6C27525D6C00604686 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83FD6B27525D6C00604686 /* SceneDelegate.swift */; };
 		5A83FD6E27525D6C00604686 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83FD6D27525D6C00604686 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A490F5A27578DB900D8D475 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		5A83FD6627525D6C00604686 /* LocalAndPushNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalAndPushNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A83FD6927525D6C00604686 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A83FD6B27525D6C00604686 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				5A83FD7427525D6D00604686 /* LaunchScreen.storyboard */,
 				5A83FD7727525D6D00604686 /* Info.plist */,
 				5A83FD7D2752630A00604686 /* LocalNotificationManager.swift */,
+				5A490F5A27578DB900D8D475 /* DateExtension.swift */,
 			);
 			path = LocalAndPushNotification;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A83FD6E27525D6C00604686 /* ViewController.swift in Sources */,
+				5A490F5B27578DB900D8D475 /* DateExtension.swift in Sources */,
 				5A83FD6A27525D6C00604686 /* AppDelegate.swift in Sources */,
 				5A83FD7E2752630A00604686 /* LocalNotificationManager.swift in Sources */,
 				5A83FD6C27525D6C00604686 /* SceneDelegate.swift in Sources */,

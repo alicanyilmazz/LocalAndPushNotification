@@ -10,8 +10,6 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setupNotifications(on: application)
@@ -37,7 +35,7 @@ extension AppDelegate{
     func setupNotifications(on application: UIApplication){
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.delegate = self
-        notificationCenter.requestAuthorization(options: [.alert , .sound]) { granted, error in
+        notificationCenter.requestAuthorization(options: [.alert , .sound , .badge]) { granted, error in
             if let error = error{
                 print("Failed to request authorization for notification center: \(error.localizedDescription)")
                 return
